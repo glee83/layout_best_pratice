@@ -32,6 +32,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Container(
+        color: kBackgroundColor,
         margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
         child: Column(
           children: [
@@ -128,6 +129,153 @@ class HomeScreen extends StatelessWidget {
                     ),
                   )
 
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 10.0),
+
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.zero,
+              child: Row(
+                children: [
+                  Container(
+                    width: 80.0,
+                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                    child: Card(
+                      elevation: 0.0,
+                      child: Column(
+                        children:  [
+                          Container(
+                            
+                            color: kButtonColor,
+                            width: size.width,
+                            
+                            padding: const EdgeInsets.all(5),
+
+                            child: const Icon(
+                              Icons.new_releases,
+                              
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            'News',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17.0
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 80.0,
+                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                    child: Card(
+                      elevation: 0.0,
+                      child: Column(
+                        children:  [
+                          Container(
+                            
+                            color: kBlueColor,
+                            width: size.width,
+                            
+                            padding: const EdgeInsets.all(5),
+
+                            child: const Icon(
+                              Icons.celebration,
+                              
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            'Sell',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17.0
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  
+                  Container(
+                    width: 80.0,
+                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                    child: Card(
+                      elevation: 0.0,
+                      child: Column(
+                        children:  [
+                          Container(
+                            
+                            color: kPinkColor,
+                            width: size.width,
+                            
+                            padding: const EdgeInsets.all(5),
+
+                            child: const Icon(
+                              Icons.event,
+                              
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            'Event',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17.0
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Container(
+                    width: 80.0,
+                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                    child: Card(
+                      elevation: 0.0,
+                      child: Column(
+                        children:  [
+                          Container(
+                            
+                            color: kIndigoColor,
+                            width: size.width,
+                            
+                            padding: const EdgeInsets.all(5),
+
+                            child: const Icon(
+                              Icons.place,
+                              
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            'Place',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17.0
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  
                 ],
               ),
             )

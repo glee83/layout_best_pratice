@@ -31,255 +31,469 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body: Container(
-        color: kBackgroundColor,
-        margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
-        child: Column(
-          children: [
-            Container(
-              height: 50.0,
-              margin: EdgeInsets.zero,
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-
-              decoration: BoxDecoration(
-                color: Colors.blueGrey[50],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.search),
-                  hintText: 'Search',
-                  suffixIcon: Icon(Icons.mic),
+      body: SingleChildScrollView(
+        child: Container(
+          color: kBackgroundColor,
+          margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
+          child: Column(
+            children: [
+              Container(
+                height: 50.0,
+                margin: EdgeInsets.zero,
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                style: GoogleFonts.lato(
-                    fontWeight: FontWeight.bold, fontSize: 20.0),
-              ),            
-            ),
-            const SizedBox(height: 10.0,),
-
-            Container(
-              margin: EdgeInsets.zero,
-              padding: const EdgeInsets.symmetric(horizontal: 10 , vertical: 10),
-              height: 200.0,
-              width: double.infinity,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.search),
+                    hintText: 'Search',
+                    suffixIcon: Icon(Icons.mic),
+                  ),
+                  style: GoogleFonts.lato(
+                      fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),            
+              ),
+              const SizedBox(height: 10.0,),
+      
+              Container(
+                margin: EdgeInsets.zero,
+                padding: const EdgeInsets.symmetric(horizontal: 10 , vertical: 10),
+                height: 200.0,
+                width: double.infinity,
+                
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: kPrimaryColor
+                ),
+      
+      
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Card Studio',
+      
+                          style: GoogleFonts.pacifico(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            color: Colors.white
+                          ),
+                        ),
+                        Text(
+                          'Tell me your name',
+      
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                            color: Colors.white
+                          ),
+                        ),
+                        Text(
+                          'Glee Albert',
+      
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w100,
+                            fontSize: 16,
+                            color: Colors.white
+                          ),
+                        ),
+                      ],
+                    ),
+      
+                    Container(
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: kButtonColor
+                      ),
+                      child: TextButton(
+                        onPressed: (){},
               
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: kPrimaryColor
+                        child: Text(
+                          'Bundle',
+      
+                          style: GoogleFonts.lato(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 16,
+                            color: Colors.white
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    )
+      
+                  ],
+                ),
               ),
-
-
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Card Studio',
-
-                        style: GoogleFonts.pacifico(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          color: Colors.white
+      
+              const SizedBox(height: 10.0),
+      
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.zero,
+          
+                child: Row(
+                  children: [
+                    Container(
+                      width: 80.0,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                      child: Card(
+                        elevation: 0.0,
+                        child: Column(
+                          children:  [
+                            Container(
+                              
+                              color: kButtonColor,
+                              width: size.width,
+                              
+                              padding: const EdgeInsets.all(5),
+      
+                              child: const Icon(
+                                Icons.new_releases,
+                                
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              'News',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17.0
+                              ),
+                            )
+                          ],
                         ),
-                      ),
-                      Text(
-                        'Tell me your name',
-
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 20,
-                          color: Colors.white
-                        ),
-                      ),
-                      Text(
-                        'Glee Albert',
-
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 16,
-                          color: Colors.white
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  Container(
-                    width: 100.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: kButtonColor
-                    ),
-                    child: TextButton(
-                      onPressed: (){},
-            
-                      child: Text(
-                        'Bundle',
-
-                        style: GoogleFonts.lato(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 16,
-                          color: Colors.white
-                        ),
-                        textAlign: TextAlign.center,
                       ),
                     ),
-                  )
-
-                ],
+                    Container(
+                      width: 80.0,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                      child: Card(
+                        elevation: 0.0,
+                        child: Column(
+                          children:  [
+                            Container(
+                              
+                              color: kBlueColor,
+                              width: size.width,
+                              
+                              padding: const EdgeInsets.all(5),
+      
+                              child: const Icon(
+                                Icons.celebration,
+                                
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              'Sell',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17.0
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    
+                    Container(
+                      width: 80.0,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                      child: Card(
+                        elevation: 0.0,
+                        child: Column(
+                          children:  [
+                            Container(
+                              
+                              color: kPinkColor,
+                              width: size.width,
+                              
+                              padding: const EdgeInsets.all(5),
+      
+                              child: const Icon(
+                                Icons.event,
+                                
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              'Event',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17.0
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+      
+                    Container(
+                      width: 80.0,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+                      child: Card(
+                        elevation: 0.0,
+                        child: Column(
+                          children:  [
+                            Container(
+                              
+                              color: kIndigoColor,
+                              width: size.width,
+                              
+                              padding: const EdgeInsets.all(5),
+      
+                              child: const Icon(
+                                Icons.place,
+                                
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              'Place',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17.0
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-
-            const SizedBox(height: 10.0),
-
-            Container(
-              width: double.infinity,
-              margin: EdgeInsets.zero,
-              child: Row(
-                children: [
-                  Container(
-                    width: 80.0,
-                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-                    child: Card(
-                      elevation: 0.0,
-                      child: Column(
-                        children:  [
-                          Container(
-                            
-                            color: kButtonColor,
-                            width: size.width,
-                            
-                            padding: const EdgeInsets.all(5),
-
-                            child: const Icon(
-                              Icons.new_releases,
-                              
+      
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                
+                child: Row(
+                  children: [
+                    Card(
+                      color: kBlueColor,
+                      
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          
+                          children: [
+      
+                            const Icon(
+                              Icons.star,
                               color: Colors.white,
-                              size: 30,
+                              size: 40,
                             ),
+                            Text(
+                              'Star Icon',
+                              style: GoogleFonts.lato(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+      
+                    Container(
+                      child: Column(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'The best way to learn how ',
+                                style: GoogleFonts.lato(
+                                  color: Colors.grey,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  
+                                ),
+                                
+                              ),
+                              Text(
+                                ' to code is to code',
+                                style: GoogleFonts.lato(
+                                  color: Colors.grey,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  
+                                ),
+                                
+                              ),
+                            ],
                           ),
-                          Text(
-                            'News',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0
-                            ),
+      
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '54,200',
+                                style: GoogleFonts.lato(
+                                  color: kIndigoColor,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+      
+                              Container(
+                                margin: const EdgeInsets.only(left: 50),
+                                 height: 40.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: kIndigoColor
+                                ),
+                                child: TextButton(
+                                  onPressed: (){},
+      
+                                  child: Text(
+                                    'Purchase',
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  )
+                                ),
+                              )
+                            ],
                           )
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    width: 80.0,
-                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-                    child: Card(
-                      elevation: 0.0,
-                      child: Column(
-                        children:  [
-                          Container(
-                            
-                            color: kBlueColor,
-                            width: size.width,
-                            
-                            padding: const EdgeInsets.all(5),
-
-                            child: const Icon(
-                              Icons.celebration,
-                              
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                          ),
-                          Text(
-                            'Sell',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  
-                  Container(
-                    width: 80.0,
-                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-                    child: Card(
-                      elevation: 0.0,
-                      child: Column(
-                        children:  [
-                          Container(
-                            
-                            color: kPinkColor,
-                            width: size.width,
-                            
-                            padding: const EdgeInsets.all(5),
-
-                            child: const Icon(
-                              Icons.event,
-                              
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                          ),
-                          Text(
-                            'Event',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Container(
-                    width: 80.0,
-                    padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-                    child: Card(
-                      elevation: 0.0,
-                      child: Column(
-                        children:  [
-                          Container(
-                            
-                            color: kIndigoColor,
-                            width: size.width,
-                            
-                            padding: const EdgeInsets.all(5),
-
-                            child: const Icon(
-                              Icons.place,
-                              
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                          ),
-                          Text(
-                            'Place',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  
-                ],
+                    )
+                  ],
+                ),
               ),
-            )
-          ],
+      
+              const SizedBox(height: 10.0,),
+      
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                
+                child: Row(
+                  children: [
+                    Card(
+                      color: kButtonColor,
+                      
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          
+                          children: [
+      
+                            const Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 40,
+                            ),
+                            Text(
+                              'Star Icon',
+                              style: GoogleFonts.lato(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+      
+                    Container(
+                      child: Column(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'The best way to learn how ',
+                                style: GoogleFonts.lato(
+                                  color: Colors.grey,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  
+                                ),
+                                
+                              ),
+                              Text(
+                                ' to code is to code',
+                                style: GoogleFonts.lato(
+                                  color: Colors.grey,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  
+                                ),
+                                
+                              ),
+                            ],
+                          ),
+      
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '54,200',
+                                style: GoogleFonts.lato(
+                                  color: kButtonColor,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+      
+                              Container(
+                                margin: const EdgeInsets.only(left: 50),
+                                 height: 40.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: kButtonColor
+                                ),
+                                child: TextButton(
+                                  onPressed: (){},
+      
+                                  child: Text(
+                                    'Purchase',
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  )
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+      
+            ],
+          ),
         ),
       ),
     );
